@@ -1,33 +1,35 @@
-package lista06_arrays.Exercicio05;
+package lista06_arrays.Exercicio08;
 
 import java.util.Scanner;
 
 public class Program {
 
 	public static void main(String[] args) {
-
 		Scanner sc = new Scanner(System.in);
 
-		System.out.printf("Quantos números você vai digitar? ");
+		System.out.printf("Quantos elementos vai ter o vetor? ");
 		int n = sc.nextInt();
 		sc.nextLine();
 
 		double[] vetor = new double[n];
-		double maiorValor = 0.0;
-		int posicaoMaiorValor = 0;
+		double soma = 0;
+		int countSoma = 0;
 
 		for (int i = 0; i < n; i++) {
 			System.out.printf("Digite um número: ");
 			double num = sc.nextDouble();
 			vetor[i] = num;
-			if (vetor[i] > maiorValor) {
-				maiorValor = vetor[i];
-				posicaoMaiorValor = i;
+			if (vetor[i] % 2 == 0) {
+				soma += vetor[i];
+				countSoma++;
 			}
 		}
 
-		System.out.printf("\nMAIOR VALOR: %.1f", maiorValor);
-		System.out.printf("\nPOSIÇÃO DO MAIOR VALOR: %d", posicaoMaiorValor);
+		if (countSoma == 0) {
+			System.out.println("NENHUM NÚMERO PAR");
+		} else {
+			System.out.printf("\nMÉDIA DOS PARES = %.1f", soma / countSoma);
+		}
 
 		sc.close();
 	}
