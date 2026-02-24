@@ -1,6 +1,7 @@
 package exercicio_enum_composicao.application;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
@@ -33,7 +34,7 @@ public class Program {
 		System.out.print("Status: ");
 		OrderStatus status = OrderStatus.valueOf(sc.next());
 
-		Order order = new Order(LocalDate.now(), status, client);
+		Order order = new Order(LocalDateTime.now(), status, client);
 
 		System.out.print("How many items to this order? ");
 		int n = sc.nextInt();

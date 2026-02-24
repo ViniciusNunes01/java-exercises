@@ -1,6 +1,6 @@
 package exercicio_enum_composicao.entities;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,9 +9,9 @@ import exercicio_enum_composicao.entities.enums.OrderStatus;
 
 public class Order {
 
-	private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy - HH:mm");
 
-	private LocalDate moment;
+	private LocalDateTime moment;
 	private OrderStatus status;
 
 	private Client cliente;
@@ -21,17 +21,17 @@ public class Order {
 
 	}
 
-	public Order(LocalDate moment, OrderStatus status, Client cliente) {
+	public Order(LocalDateTime moment, OrderStatus status, Client cliente) {
 		this.moment = moment;
 		this.status = status;
 		this.cliente = cliente;
 	}
 
-	public LocalDate getMoment() {
+	public LocalDateTime getMoment() {
 		return moment;
 	}
 
-	public void setMoment(LocalDate moment) {
+	public void setMoment(LocalDateTime moment) {
 		this.moment = moment;
 	}
 
