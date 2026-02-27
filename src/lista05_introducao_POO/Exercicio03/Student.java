@@ -8,6 +8,10 @@ public class Student {
 	private double nota3;
 	private double notaFinal;
 
+	public Student() {
+
+	}
+
 	public Student(String nome, double nota1, double nota2, double nota3) {
 
 		this.nome = nome;

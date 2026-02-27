@@ -6,6 +6,10 @@ public class Employee {
 	private double grossSalary;
 	private double tax;
 
+	public Employee() {
+
+	}
+
 	public Employee(String name, double grossSalary, double tax) {
 		this.name = name;
 		this.grossSalary = grossSalary;

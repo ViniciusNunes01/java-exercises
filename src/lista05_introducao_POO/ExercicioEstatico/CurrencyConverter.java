@@ -8,6 +8,10 @@ public class CurrencyConverter {
 	private double dollarQuantity;
 	private double emReais;
 
+	public CurrencyConverter() {
+
+	}
+
 	public CurrencyConverter(double dollarPrice, double dollarQuantity) {
 		this.dollarPrice = dollarPrice;
 		this.dollarQuantity = dollarQuantity;

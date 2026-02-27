@@ -6,6 +6,10 @@ public class Person {
 	private int idade;
 	private double altura;
 
+	public Person() {
+
+	}
+
 	public Person(String nome, int idade, double altura) {
 		this.nome = nome;
 		this.idade = idade;
